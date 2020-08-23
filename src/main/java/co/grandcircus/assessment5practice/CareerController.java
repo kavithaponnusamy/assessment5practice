@@ -16,13 +16,13 @@ public class CareerController {
 		return "year-selection";
 	}
 	
-	@PostMapping("/submit-details")
+	/*@PostMapping("/submit-details")
 	public String submitYear(Model model,String name, Integer year) {
 		model.addAttribute("name",name);
 		model.addAttribute("year",year);
 		return "submit-details";		
-	}
-	@RequestMapping("/sorry")
+	}*/
+	@PostMapping("/sorry")
 	public String displayMessage(Model model,@RequestParam("name")String name,@RequestParam("year")Integer year) {
 		String msg="";
 		boolean valid=true;
@@ -45,7 +45,7 @@ public class CareerController {
 			return "sorry";
 		}
 	}
-	@RequestMapping("/career-selection")
+	@PostMapping("/career-selection")
 	public String careerSelection() {
 		return "career-selection";
 	}

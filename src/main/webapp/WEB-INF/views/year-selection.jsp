@@ -20,11 +20,12 @@
 
 	<div class="container">
 		<h2 class="display-4">Index Page</h2>
-		<form action="/submit-details" method="post">
+		<form action="/sorry" method="post"> 
 		<p>Name <input type="text" name="name"></p>
-		<p>Year <input type="text" name="year"  required pattern="\d{4}" minlength="4" maxlength="4"></p>
+		<p>Year <input type="text" name="year"  required pattern="\d{4}" ></p>
 		<p></p>
-		<button type="submit" >Submit</button>
+		<button type="submit" >Go</button>
+		<!--<a href="/sorry?name=${name}&year=${year}"></a>-->
 		</form>
 			</div>
 

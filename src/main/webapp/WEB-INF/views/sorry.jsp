@@ -10,9 +10,10 @@
 </head>
 <body>
 
-<c:out value="${msg}"></c:out>
+<strong><c:out value="${msg}"></c:out>
 <p> </p>
 <c:out value="${msg2}"></c:out>
+</strong>
 <p> </p>
 <p> </p>
 <a href="/">Back to Home</a>
