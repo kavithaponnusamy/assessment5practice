@@ -6,14 +6,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Sorry page</title>
 </head>
 <body>
-<h3>Display Sorry Message(View Name)</h3>
-<c:out value="${msg}"></c:out>
-<p></p>
-<c:out value="${msg2}"></c:out>
 
-<a href="/carrer-selection">Select a Carrer</a>
+<c:out value="${msg}"></c:out>
+<p> </p>
+<c:out value="${msg2}"></c:out>
+<p> </p>
+<p> </p>
+<a href="/">Back to Home</a>
 </body>
 </html>

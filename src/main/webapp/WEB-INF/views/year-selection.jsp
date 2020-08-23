@@ -22,7 +22,7 @@
 		<h2 class="display-4">Index Page</h2>
 		<form action="/submit-details" method="post">
 		<p>Name <input type="text" name="name"></p>
-		<p>Year <input type="number" name="year"></p>
+		<p>Year <input type="text" name="year"  required pattern="\d{4}" minlength="4" maxlength="4"></p>
 		<p></p>
 		<button type="submit" >Submit</button>
 		</form>

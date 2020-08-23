@@ -9,8 +9,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>You have chosen </h3><p>Hello world</p>
-<c:out value="${choice}"></c:out>
+<p>You have chosen: <strong><c:out value="${choice}"></c:out></strong> </p>
 
+<p> </p>
+<p> </p>
+<a href="/">Back to Home</a>
 </body>
 </html>

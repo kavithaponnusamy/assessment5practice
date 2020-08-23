@@ -25,37 +25,34 @@ public class CareerController {
 	@RequestMapping("/sorry")
 	public String displayMessage(Model model,@RequestParam("name")String name,@RequestParam("year")Integer year) {
 		String msg="";
+		boolean valid=true;
 		if(year<=1943 || year>=2003){
 			if(year<=1943) {
 			msg="Sorry, your birth year is out of range ";
+			valid=false;
 		}else{
 			msg="Sorry, you're too young";
+			valid=false;
 		}	
 		model.addAttribute("msg",msg);
 		} if(Character.isLowerCase(name.charAt(0))){
-			model.addAttribute("msg2","name does not follow guidelines");
+			model.addAttribute("msg2","Name does not follow guidelines");
+			valid=false;
 		}
-		return "sorry";
+		if (valid) {
+			return "career-selection";
+		}else {
+			return "sorry";
+		}
 	}
-	@RequestMapping("/carrer-selection")
-	public String carrerSelection() {
-		return "carrer-selection";
+	@RequestMapping("/career-selection")
+	public String careerSelection() {
+		return "career-selection";
 	}
-	@RequestMapping("/carrer")
-	public String carrerChoice(Model model,@RequestParam("choice") String choice) {
-		/*String res="";
-		if(choice.equalsIgnoreCase("system")) {
-			res=choice;			
-		}else if(choice.equalsIgnoreCase("scrum master")) {
-			res=choice;
-		}else if(choice.equalsIgnoreCase("QA Analyst")) {
-			res=choice;
-		}else
-		{
-			res=choice;
-		}*/
+	@RequestMapping("/career")
+	public String careerChoice(Model model,@RequestParam("choice") String choice) {
 		model.addAttribute("choice",choice);
-		return "carrer-display";
+		return "career-display";
 	}
 	
 	
