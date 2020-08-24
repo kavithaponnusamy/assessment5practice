@@ -1,6 +1,6 @@
 package co.grandcircus.assessment5practice;
 
-import java.util.Date;
+
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,14 +16,9 @@ public class CareerController {
 		return "year-selection";
 	}
 	
-	/*@PostMapping("/submit-details")
-	public String submitYear(Model model,String name, Integer year) {
-		model.addAttribute("name",name);
-		model.addAttribute("year",year);
-		return "submit-details";		
-	}*/
-	@PostMapping("/sorry")
-	public String displayMessage(Model model,@RequestParam("name")String name,@RequestParam("year")Integer year) {
+	
+	@PostMapping("/submit-details")
+	public String displayMessage(Model model,@RequestParam("name")String name,@RequestParam("year") Integer year) {
 		String msg="";
 		boolean valid=true;
 		if(year<=1943 || year>=2003){
